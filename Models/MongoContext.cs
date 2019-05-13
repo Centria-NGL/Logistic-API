@@ -10,11 +10,12 @@ namespace MongoMVC.Models
     {
         private readonly IMongoDatabase _mongoDb;
         public MongoContext()
-        
+        { 
             var client = new MongoClient("mongodb+srv://Logistics:<password>@logistics-hr6zq.gcp.mongodb.net/test?retryWrites=true");
             _mongoDb = client.GetDatabase("Logistics");
         }
         public IMongoCollection<Company> Company
+
         {
             get
             {
